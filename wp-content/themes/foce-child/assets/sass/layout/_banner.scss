@@ -1,0 +1,17 @@
+
+// bannière video avec annimation
+.banner{
+    
+    background-image: none;
+}
+#bg-video{
+    z-index: -1;
+    position: absolute;
+    
+    animation: fadeDown 2s;
+}
+
+#site-logo{
+    animation: fadeUp 2s ease-in-out 0s 1 forwards , float 9s cubic-bezier(.5,.12,.2,0.5) 2s infinite;
+   
+}

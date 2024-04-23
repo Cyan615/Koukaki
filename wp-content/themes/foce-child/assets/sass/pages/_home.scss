@@ -18,9 +18,12 @@
 .story h2::after{
     transform-origin: 77px 77px;
 }
-#studio h2::before{
+#studio{
+    overflow: hidden;
+    & h2::before{
     transform-origin: 101px 99px ;
-}
+    }
+} 
 .site-footer::after{
     transform-origin: 86px 84px;
 }
@@ -40,3 +43,4 @@
     transition-delay: .2s;
 }
 //*** fin animation titre ***
+

@@ -1,0 +1,49 @@
+#characters{
+    // display: flex;
+    flex-direction: column;
+    max-width: 1440px;
+    width: 100vw;
+}
+.characters__title{
+    align-self: baseline;
+    padding-left: 2.8rem;
+}
+.story #characters div{
+  flex: none;
+}  
+.swiper{
+    max-width: 85%;
+}
+.swiper-wrapper{
+    width: unset!important;
+        
+}
+.swiper-slide{
+    background-position: center;
+    background-size: cover;
+    padding-bottom: 4rem;
+    text-align: center;
+}    
+
+@media screen  and (max-width: $breakpoint__mobile){
+    .characters{
+        width: 100%;
+        justify-content: center;
+        &__title{
+            padding: 5% 4%;
+            
+        }
+        
+    }
+}
+@media screen  and (max-width: $breakpoint__tablet){
+    .characters{
+        
+        justify-content: center;
+        &__title{
+            padding: 2rem 3rem;
+            line-height: 0.8;
+        }
+        
+    }
+}

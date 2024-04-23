@@ -1,11 +1,12 @@
 
 // bannière video avec annimation
 .banner{
-    
-    background-image: none;
+    position: relative;
+    // background-image: none;
+    object-fit: contain;
 }
 #bg-video{
-    z-index: -2;
+    z-index: 0;
     position: absolute;
     
     animation: fadeDown 2s;
@@ -15,4 +16,15 @@
     animation: fadeUp 2s ease-in-out 0s 1 forwards , float 9s cubic-bezier(.5,.12,.2,0.5) 2s infinite;
     position: sticky;
     // z-index: -1;
+}
+
+@media screen  and (max-width: $breakpoint__mobile){
+    .banner{
+        
+        min-height: 202px;
+        background-repeat: no-repeat;
+        & video{
+            display: none;
+        }
+    }
 }

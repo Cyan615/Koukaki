@@ -5,13 +5,14 @@ get_header();
 
     <main id="primary" class="site-main">
         <section class="banner">
+            <!-- ajout de la vidéo en fond -->
             <video  id="bg-video" poster="<?php echo get_template_directory_uri() . '/assets/images/banner.png'; ?> " autoplay="autoplay" loop="infinite" muted="" >
                 <source src="<?php echo get_stylesheet_directory_uri(); ?> /assets/images/bg-video-header.mp4 " type="video/mp4">
             </video>
             <img id="site-logo" src="<?php echo get_template_directory_uri() . '/assets/images/logo.png'; ?> " alt="logo Fleurs d'oranger & chats errants">
         </section>
-        <section id="#story" class="story">
-            <h2 class="fadeTitle"><span class="hidden-1">L'histoire</span></h2>
+        <section id="story" class="story">
+            <h2 class="fadeTitle"><span class="hidden-1">L'</span><span class="hidden-2">histoire</span></h2>
             <article id="" class="story__article">
                 <p><?php echo get_theme_mod('story'); ?></p>
             </article>
@@ -22,12 +23,13 @@ get_header();
             <?php get_template_part('parts/sliderCharacters');  ?>
 
 
-            <article id="place">
+            <article id="place" class="place">
                 <div>
                     <h3 class="fadeTitle"><span class="hidden-1">Le </span><span class="hidden-2">Lieu</span></h3>
                     <p><?php echo get_theme_mod('place'); ?></p>
                 </div>
-
+                <img class="clouds place__bigCloud" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/big_cloud.png'; ?>" alt="gros nuage"></img>
+                <img class="clouds place__smallCloud" src="<?php echo get_stylesheet_directory_uri() . '/assets/images/little_cloud.png'; ?>" alt="petit nuage"></img>
             </article>
         </section>
 

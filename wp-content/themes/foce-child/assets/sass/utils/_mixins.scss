@@ -1,0 +1,11 @@
+@mixin cloud {
+    position: absolute;
+    filter: blur(10px);
+    z-index: 10;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    
+}
+@mixin hoverShadow{
+    text-shadow: 0px 0px 10px rgba(255, 92, 0, 1);
+} 

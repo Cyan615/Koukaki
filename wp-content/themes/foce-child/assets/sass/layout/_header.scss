@@ -1,0 +1,173 @@
+.navBar {
+    text-align: center;
+    ul{
+       justify-content: flex-start; 
+    }
+    &--site-title{
+    font-size:  calc(0.8rem + 0.5vw) !important;
+    height: 100%;
+    display: inline-block;
+    }
+    &__burgerBtn{
+        position: absolute;
+        z-index: 2000;
+        width: 30px;
+        height: 30px;
+        top:4vh;
+        right: 8vw;
+        cursor: pointer !important;
+        &--line{
+            position: absolute;
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: #000;
+            transition: transform 0.3s ease-out,
+            opacity 0.1s ease-out;
+        }
+    }
+    &__burgerBtn.open .l1{
+        transform: translate3d(0, 0, 0) rotate(135deg);
+    }
+    &__burgerBtn.open .l2{
+        opacity: 0;
+    }
+    &__burgerBtn.open .l3{
+        transform: translate3d(0, 0, 0) rotate(-135deg);
+    }
+}
+.burger{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFF5E9;
+    height: calc(100vh - 76px);
+    transform: translate3d(0,-1900px,0);
+    // transition: transform 0.8s ease-in-out;
+    
+    & .flowers-right::after{
+        content: url("../../assets/images/random_flower.png");
+        position: absolute;
+        right: -5%;
+        bottom: 45%;
+        animation: rotateFlower 23s linear infinite;
+    }
+    & .flowers-right::before{
+        content: url("../../assets/images/Sunflower.png");
+        position: absolute;
+        right: 15rem;
+        bottom: 71%;
+        animation: rotateFlower 23s linear infinite;
+        
+    }
+    & .flowers-left::after{
+        content: url("../../assets/images/Flower.png");
+        position: absolute;
+        right: 83%;
+        bottom: 38%;
+        animation: rotateFlower 23s linear infinite;
+    }
+    & .flowers-left::before{
+        content: url("../../assets/images/orchid.png");
+        position: absolute;
+        right: 93%;
+        bottom: 74%;
+        animation: rotateFlower 23s linear infinite;
+    }
+    &::after{
+        content: url("../../assets/images/hibiscus_footer.png");
+        
+        position: absolute;
+        right: -24rem;
+        bottom: -25.5rem;
+        animation: rotateFlower 23s linear infinite;
+    }
+    
+    
+    &.open{
+        transform: translate3d(0,0,0);
+        animation: rotateFlower 23s linear infinite;
+        transition: transform 0.3s ease-in-out;
+    }
+    &__logo{
+        margin-top: 3rem;
+        padding-bottom: 2rem;
+        width: 9vw;
+        filter: drop-shadow(0px, 0px, 26px rgba(255, 92, 0, 0.6)) !important;
+        -webkit-filter: drop-shadow(0px 0px 26px rgba(255, 92, 0, 0.6));
+        -moz-filter: drop-shadow(0px 0px 26px rgba(255, 92, 0, 0.6));
+    }
+
+    
+    &__list{
+        flex-direction: column;
+        gap: 2rem;
+        &--items{
+            font-size: calc(2rem + 1.5vw) !important;
+        } 
+        &--items>a:hover{
+        @include hoverShadow ;
+        }
+        &--items:nth-child(2)::after{
+            content: url("../../assets/images/cat_blue.png");
+            position: absolute;
+            right: 33rem;
+            bottom: 1.5rem;
+            animation: float 12s ease-out infinite;
+        }
+        &--items:nth-child(4)::after{
+            content: url("../../assets/images/cat_black.png");
+            position: absolute;
+            right: -33rem;
+            bottom: -3.5rem;
+            animation: float 12s ease-out infinite;
+        }
+        &--items:nth-child(5)::after{
+            content: url("../../assets/images/cat_yellow.png");
+            position: absolute;
+            right: 57rem;
+            bottom: -11.5rem;
+            animation: float 12s ease-out infinite;
+        }
+    }
+}    
+
+.l1 {
+    transform: translate3d(0, -10px, 0);
+}
+.l3 {
+    transform: translate3d(0, 10px, 0);
+}
+
+@media  screen and (max-width: $breakpoint__mobile) {
+    .main-navigation ul{
+        display: block;
+    }
+    .navBar{
+        width: 100vw;
+        height: 10vh;
+        &__burgerBtn{
+            width: 20px;
+            height: 20px;
+        }
+    }
+    .burger{
+        &::after, .flowers-right::after, .flowers-right::before, .flowers-left::after, .flowers-left::before{
+            content: "";
+        }
+    }
+}
+@media  screen and (max-width: $breakpoint__tablet){
+    .burger{
+        &__list{
+            &--items:nth-child(2)::after{
+                right: 120%;
+                bottom: 9%;
+            }
+            &--items:nth-child(4)::after{
+                right: -286%;
+                bottom: -117%;
+            }
+        }
+    }
+}

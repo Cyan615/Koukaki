@@ -1,15 +1,17 @@
 @import "./utils/variable";
 // @import "./utils/function";
-// @import "./utils/mixin";
+@import "./utils/mixins";
 
 // @import "./base/base";
 @import "./base/animations";
 
 @import "./layout/banner";
 @import "./layout/characters";
+@import "./layout/header";
 
 // @import "./components/variables";
 
 @import "./pages/home";
+@import "./pages/place_cloud";
 
 @import "./themes/oscars";

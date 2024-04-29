@@ -154,10 +154,11 @@
     .burger{
         &::after, .flowers-right::after, .flowers-right::before, .flowers-left::after, .flowers-left::before{
             content: "";
+            
         }
     }
 }
-@media  screen and (max-width: $breakpoint__tablet){
+@media  screen and (min-width: ($breakpoint__mobile + 1)) and (max-width: $breakpoint__tablet){
     .burger{
         &__list{
             &--items:nth-child(2)::after{

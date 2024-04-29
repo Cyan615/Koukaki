@@ -28,11 +28,12 @@ function elementOffsetTop(element, emp = 0) {
 
 
 // Animation des titres de sections au scroll
-const ratio = 0.7;
+
 
 const titles = document.querySelectorAll('.fadeTitle'); 
 const observer = new IntersectionObserver((entries) => {
     // console.log(entries);
+    const ratio = 0.7;
     entries.forEach(entry => {
         if (entry.isIntersecting) {
              entry.target.classList.remove('fadeTitle'); 
@@ -71,7 +72,7 @@ window.addEventListener('scroll', function ()  {
      
     if (Xvalue > v  && Xvalue < (v+400)) {
         //** valeur scroll **
-        let t = Math.round(Math.max(-(Xvalue - place),-400)) ;
+        let t = Math.round(Math.max(-((Xvalue - place)/0.7),-400)) ;
         
         bigCloud.style.transform = `translateX(${t}px)`;
         smallCloud.style.transform = `translateX(${t}px)`;

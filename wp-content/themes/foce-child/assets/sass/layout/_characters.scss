@@ -36,7 +36,7 @@
         
     }
 }
-@media screen  and (max-width: $breakpoint__tablet){
+@media screen  and (min-width: ($breakpoint__mobile + 1) ) and (max-width: $breakpoint__tablet){
     .characters{
         
         justify-content: center;

@@ -19,6 +19,7 @@
     }
     & .clouds{
         transform: translateX(0px);
+        transition: all .5s ease-in-out;
     }
 }
 

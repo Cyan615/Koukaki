@@ -56,23 +56,22 @@ const bigCloud = document.querySelector(".place__bigCloud");
 const smallCloud = document.querySelector(".place__smallCloud");
 
 let Xvalue = 0;
-const root = document.documentElement;
 let scrollY = window.scrollY;
 // on écoute le 'scroll'
 window.addEventListener('scroll', function ()  {
     titleLogo.style.top = scrollY / 2 + "px";
 
-    
-
     let place = (document.getElementById('place')).offsetTop; //distance section par rapport au haut de la page
     
-    let v = place+200;
+    let v = place*0.15;
     
+    console.log(v);
     Xvalue = this.scrollY;
      
-    if (Xvalue > v  && Xvalue < (v+400)) {
+     console.log(place); 
+    if (Xvalue > (place + v)  ) {
         //** valeur scroll **
-        let t = Math.round(Math.max(-((Xvalue - place)/0.7),-400)) ;
+        let t = Math.round(Math.max(-((Xvalue - place)*0.2),-400)) ;
         
         bigCloud.style.transform = `translateX(${t}px)`;
         smallCloud.style.transform = `translateX(${t}px)`;
